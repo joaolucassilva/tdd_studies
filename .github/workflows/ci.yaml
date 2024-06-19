@@ -1,4 +1,4 @@
-name: Run PHPUnit tests
+name: CI
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  phpunit:
+  tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,22 +20,10 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
-          extensions: mbstring, intl, dom
-          ini-values: post_max_size=256M, upload_max_filesize=256M, memory_limit=512M
-          coverage: xdebug
+          php-version: 8.2
 
       - name: Install dependencies
-        run: composer install --no-progress --no-suggest --prefer-dist
-        env:
-          COMPOSER_CACHE_DIR: /tmp/composer_cache # Usar cache para evitar problemas de conexão
+        run: composer install --no-scripts
 
       - name: Run PHPUnit
-        run: ./vendor/bin/phpunit --coverage-text --colors=never
-
-      - name: Upload test results if failed
-        if: failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: phpunit-results
-          path: ./tests/_output/
+        run: ./vendor/bin/phpunit
