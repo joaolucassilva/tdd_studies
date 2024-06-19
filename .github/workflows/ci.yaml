@@ -15,7 +15,7 @@ jobs:
         uses: php-actions/phpunit@master
         with:
           bootstrap: vendor/autoload.php
-          configuration: test/phpunit.xml
+          configuration: phpunit.xml
           args: --coverage-text
           version: 11
           php_version: "8.2"
