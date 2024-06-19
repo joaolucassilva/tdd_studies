@@ -21,7 +21,7 @@ jobs:
       - name: Install composer and dependencies
         run: composer install --no-progress --no-suggest --prefer-dist
         env:
-          COMPOSER_CACHE_DIR: /tmp/composer_cache # Usar cache para evitar problemas de conexão
+          COMPOSER_CACHE_DIR: /tmp/composer_cache
 
       - name: PHPUnit Tests
-        run: ./vendor/bin/phpunit
+        run: ./vendor/bin/phpunit --colors=never
