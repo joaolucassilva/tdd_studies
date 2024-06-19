@@ -1,0 +1,30 @@
+{
+  "name": "tdd/tdd",
+  "authors": [
+    {
+      "name": "joao",
+      "email": "luccas332@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-latest",
+    "phpunit/phpunit": "^11"
+  },
+  "autoload": {
+    "psr-4": {
+      "CDC\\Loja\\": "src/CDC/Loja",
+      "CDC\\Exemplos\\": "src/CDC/Exemplos"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}
