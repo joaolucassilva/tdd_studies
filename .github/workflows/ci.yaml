@@ -1,21 +1,22 @@
 name: CI
 
-on: [ push ]
+on: [push]
 
 jobs:
-  build-test:
-    runs-on: ubuntu-latest
+ build-test:
+   runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
+   steps:
+     - name: Checkout Code
+       uses: actions/checkout@v2
 
-      - uses: php-actions/composer@v6
+     - name: Install composer and dependencies
+       uses: php-actions/composer@v6
 
-      - name: PHPUnit Tests
-        uses: php-actions/phpunit@master
-        with:
-          bootstrap: vendor/autoload.php
-          configuration: phpunit.xml
-          args: --coverage-text
-          version: 11
-          php_version: "8.2"
+     - name: PHPUnit Tests
+       uses: php-actions/phpunit@v3
+       with:
+         bootstrap: vendor/autoload.php
+         configuration: phpunit.xml
+         php_extensions: xdebug
+         args: tests
