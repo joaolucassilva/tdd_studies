@@ -1,14 +1,26 @@
-name: CI
+name: Run PHPUnit tests
 
 on: [ push ]
 
 jobs:
-  build-test:
+  phpunit:
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-      - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
-      - uses: php-actions/composer@v6
-      - run: echo "Composer dependencies have been installed"
-      - run: vendor/bin/phpunit
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: mbstring, intl, dom
+        ini-values: post_max_size=256M, upload_max_filesize=256M, memory_limit=512M
+        coverage: xdebug
+
+    - name: Install dependencies
+      run: composer install --no-progress --no-suggest --prefer-dist
+
+    - name: Run PHPUnit
+      run: ./vendor/bin/phpunit --coverage-text --colors=never
