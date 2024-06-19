@@ -24,4 +24,4 @@ jobs:
           COMPOSER_CACHE_DIR: /tmp/composer_cache # Usar cache para evitar problemas de conexão
 
       - name: PHPUnit Tests
-        run: ./vendor/bin/phpunit --coverage-text --colors=never
+        run: ./vendor/bin/phpunit
