@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace CDC\Loja\RH;
+namespace Loja\RH;
 
 enum TabelaCargosEnum: int
 {

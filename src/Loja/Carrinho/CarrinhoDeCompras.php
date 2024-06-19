@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace CDC\Loja\Carrinho;
+namespace Loja\Carrinho;
 
 use ArrayObject;
-use CDC\Loja\Produto\Produto;
+use Loja\Produto\Produto;
 
 class CarrinhoDeCompras
 {

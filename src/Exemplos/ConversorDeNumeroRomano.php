@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace CDC\Exemplos;
+namespace Exemplos;
 
 class ConversorDeNumeroRomano
 {
-    protected $tabela = [
+    protected array $tabela = [
         "I" => 1,
         "V" => 5,
         "X" => 10,

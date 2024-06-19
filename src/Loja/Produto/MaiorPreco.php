@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace CDC\Loja\Produto;
+namespace Loja\Produto;
 
-use CDC\Loja\Carrinho\CarrinhoDeCompras;
+use Loja\Carrinho\CarrinhoDeCompras;
 
 class MaiorPreco
 {

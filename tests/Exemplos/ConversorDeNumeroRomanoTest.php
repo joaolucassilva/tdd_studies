@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace tests\Exemplos;
 
-use CDC\Exemplos\ConversorDeNumeroRomano;
 use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\TestCase;
+use Exemplos\ConversorDeNumeroRomano;
+use tests\TestCase;
 
 class ConversorDeNumeroRomanoTest extends TestCase
 {

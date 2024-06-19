@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace tests\Loja\RH;
 
-use CDC\Loja\RH\CalculadoraDeSalario;
-use CDC\Loja\RH\Funcionario;
-use CDC\Loja\RH\TabelaCargosEnum;
-use PHPUnit\Framework\TestCase;
+use tests\TestCase;
+use Loja\RH\CalculadoraDeSalario;
+use Loja\RH\Funcionario;
+use Loja\RH\TabelaCargosEnum;
 
 class CalculadoraDeSalarioTest extends TestCase
 {

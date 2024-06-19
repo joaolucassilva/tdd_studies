@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace tests\Loja\Produto;
 
-use CDC\Loja\Carrinho\CarrinhoDeCompras;
-use CDC\Loja\Produto\MaiorPreco;
-use Tests\CDC\TestCase;
+use Loja\Carrinho\CarrinhoDeCompras;
+use Loja\Produto\MaiorPreco;
+use tests\TestCase;
 
 class MaiorPrecoTest extends TestCase
 {

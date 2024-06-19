@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace tests\Loja\Produto;
 
-use CDC\Loja\Carrinho\CarrinhoDeCompras;
-use CDC\Loja\Produto\MaiorEMenor;
-use CDC\Loja\Produto\Produto;
-use PHPUnit\Framework\TestCase;
+use tests\TestCase;
+use Loja\Carrinho\CarrinhoDeCompras;
+use Loja\Produto\MaiorEMenor;
+use Loja\Produto\Produto;
 
 class MaiorEMenorTest extends TestCase
 {
