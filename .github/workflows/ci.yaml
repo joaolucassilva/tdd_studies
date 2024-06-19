@@ -1,29 +1,21 @@
 name: CI
 
-on:
-  push:
-    branches:
-      - main
-      - 'feature/*'
-  pull_request:
-    branches:
-      - main
+on: [ push ]
 
 jobs:
-  tests:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
+      - uses: php-actions/composer@v6
+
+      - name: PHPUnit Tests
+        uses: php-actions/phpunit@master
         with:
-          php-version: 8.2
-
-      - name: Install dependencies
-        run: composer install --no-scripts
-
-      - name: Run PHPUnit
-        run: ./vendor/bin/phpunit
+          bootstrap: vendor/autoload.php
+          configuration: test/phpunit.xml
+          args: --coverage-text
+          version: 11
+          php_version: "8.2"
