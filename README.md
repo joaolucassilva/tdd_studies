@@ -1,10 +1,10 @@
-# Test-Drive Development PHP
+# Test-Driven Development - Teste e Design no Mundo Real com PHP
 
-Este repositorio contem o codigo dos meus estudos apresentados no livro "Test-Driven Development PHP".
+Este repositorio contem o codigo dos meus estudos apresentados no livro.
  Estou utilizando este repositorio para praticar e aplicar os conceitos de desenvolvimento orientados a testes apresentados no livro. 
 
  ## Sobre o Livro
- "Test-Driven Development PHP" é um guia completo sobre a metodologia de desenvolvimento orientado a testes aplicada à linguagem PHP. 
+ "Test-Driven Development" é um guia completo sobre a metodologia de desenvolvimento orientado a testes aplicada à linguagem PHP. 
 
  ## Objetivo
  O objetivo deste repositorio e acompanhar e praticar os conceitos e exemplos abordados no livro, desenvolvimento minhas habilidades em TDD com PHP.
