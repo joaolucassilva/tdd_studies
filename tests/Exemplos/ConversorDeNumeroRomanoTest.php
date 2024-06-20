@@ -6,7 +6,7 @@ namespace Tests\Exemplos;
 
 use PHPUnit\Framework\Attributes\DataProvider;
 use Exemplos\ConversorDeNumeroRomano;
-use tests\TestCase;
+use Tests\TestCase;
 
 class ConversorDeNumeroRomanoTest extends TestCase
 {
