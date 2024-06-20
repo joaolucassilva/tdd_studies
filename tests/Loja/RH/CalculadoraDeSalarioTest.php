@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace tests\Loja\RH;
+namespace Tests\Loja\RH;
 
-use tests\TestCase;
+use Tests\TestCase;
 use Loja\RH\CalculadoraDeSalario;
 use Loja\RH\Funcionario;
 use Loja\RH\TabelaCargosEnum;

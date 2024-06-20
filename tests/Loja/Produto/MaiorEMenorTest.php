@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace tests\Loja\Produto;
+namespace Tests\Loja\Produto;
 
-use tests\TestCase;
+use Tests\TestCase;
 use Loja\Carrinho\CarrinhoDeCompras;
 use Loja\Produto\MaiorEMenor;
 use Loja\Produto\Produto;
